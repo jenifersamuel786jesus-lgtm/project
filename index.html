@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flower</title>
+    <link rel="icon" href="group.jpg">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            opacity: 0.8;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .head{
+            min-height:650px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+            }
+        .head::before{
+            content: '';
+            background-image: url(group.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            inset:0;
+            opacity: 0.5;
+            box-shadow: 2px 2px 7px black;
+        }
+        .head h1{
+            font-size: 50px;
+            text-align: center;
+            position: relative;
+        
+        }
+        .head h2{
+            text-align: center;
+        }
+        .head a{
+            padding: 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 1px 1px 4px black;
+            text-decoration: none;
+            color: black;
+            position: relative;
+
+        }
+        .head a:hover{
+            box-shadow: inset 2px 2px 7px black;
+        }
+        .nav{
+            min-height: 50px;
+            background-color:pink;
+            position: sticky;
+            top:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 1px 1px 4px black;
+        }
+        .nav a{
+            text-align: center;
+            margin: 50px;
+            text-decoration: none;
+            color: black;
+            background-color: pink;
+            padding: 10px;
+            border: 1px solid pink;
+            border-radius: 50px;
+            font-size: 22px;
+        }
+        .nav a:hover{
+            box-shadow: inset 1px 1px 4px black;
+        }
+        .flowery{
+            height: 500px;
+            background-color: pink;
+            box-shadow: 2px 2px 7px black;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 17px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #login{
+            min-height: 400px;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:pink;
+          flex-direction: column;
+            border-radius: 50px;
+            margin-bottom: 15px;
+             margin-left: 600px;
+             margin-right: 600px;
+            box-shadow: 1px 1px 3px black;
+            
+        }
+        #form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #form input{
+            margin:5px;
+            padding: 5px;
+            border-radius: 15px;
+            box-shadow: 1px 1px 3px black;
+        }
+        #form button{
+            padding: 10px;
+            border-radius: 15px;
+            background-color: whitesmoke;
+            margin: 10px;
+            font-weight: bold;
+        }
+        #form button:hover{
+            box-shadow: inset 2px 2px 7px black;
+        }
+        #shop{
+            min-height: 1000px;
+            background-color:pink;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 7px black;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 17px;
+            margin-left: 10px;
+           margin-right: 10px;
+        }
+      
+        .flower{
+            margin: 10px;
+            min-height: 300px;
+            min-width:300px;
+            background-color:aliceblue;
+            box-shadow: 1px 1px 4px black;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .flower img{
+            height: 175px;
+            width: 175px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 7px black;
+        }
+        .flower p{
+            font-weight: bold;
+            font-style: oblique;
+            
+        }
+        .flower button{
+            font-weight: bold;
+            font-style: oblique;
+            padding: 10px;
+            border-radius: 50px;
+            background-color: pink;
+        }
+        #tips{
+            height: 1500px;
+            background-color: pink;
+            box-shadow: 2px 2px 7px black;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+             margin-left: 10px;
+           margin-right: 10px;
+           font-size: 17px;
+        }
+        
+        #contact{
+            bottom: 0;
+            padding: 10px;
+            height: 100px;
+            background-color: pink;
+            box-shadow: 2px 2px 7px black;
+            margin-left: 10px;
+           margin-right: 10px;
+           font-size: 17px;
+           border-radius: 15px;
+        }
+        #output{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    
+    
+        <div class="head">
+            <h1>Flowery Touch</h1><h2 >"Touching Hearts With Flowers"</h2><br><br><a href="#login">Login</a></div>
+        <div class="nav">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#tips">Tips</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+        </div><br>
+        <div id="login">
+        <h1>Login</h1>
+        <form action="" id="form">
+            <table >
+                <tr ><td><label for="name">Name: </label></td>
+           <td> <input type="text" name="name" id="name" placeholder="Enter name" required></td></tr>
+            
+            <tr><td><label for="email">Email:    </label></td>
+        <td><input type="email" id="email" name="email" placeholder="Enter email" required></tr></td>
+        <tr><td><label for="password">Password: </label></td><td><input type="password" id="password" name="password" placeholder="Enter password" required></td>
+        </tr>
+        </table>
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+     <div id="output"></div>
+   
+        <div class="flowery" id="home">
+          
+<h3>Welcome to Flowery Touch — Where Every Bloom Feels Special
+</h3>
+ <p>At Flowery Touch, flowers aren’t just flowers — they’re feelings, smiles, surprises, and little moments of joy. We believe every bouquet should carry a story and every petal should remind you that life is beautiful, delicate, and worth celebrating.
+</p>
+<h5>What We Do
+</h5>
+<p>
+From fresh-cut flowers to unique arrangements, Flowery Touch brings nature’s beauty straight to you. Whether it’s a birthday surprise, a wedding celebration, or just a touch of nature for your home or workspace, our flowers add warmth and elegance wherever they go.
+</p>
+<h5>Why Choose Us
+</h5>
+<p>🌼 Fresh, seasonal flowers<br>
+
+🌿 Thoughtful, handcrafted designs <br>
+
+🎁 Custom bouquets for every occasion
+<br>
+🚚 Reliable delivery with love
+<br>
+💌 Friendly support, always here for you
+
+</p>
+<h5>✨ Add a Flowery Touch to your life today. ✨
+</h5>
+    </div><br>
+    
+    <div id="shop">
+        
+        <div class="flower">
+<img src="image.png">
+<p>Rose - $50</p>
+<button onclick="myfunc()">Shop</button>
+        </div>
+        <div class="flower" ><img src="bell.jpg">
+<p>Blue Bell - $70</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="chry.jpg">
+<p>Chrysanthemum - $90</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="daisy.jpg">
+<p>Daisy - $40</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="hibi.jpg">
+<p>Hibiscus - $30</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="jasmine.jpg">
+<p>Jasmine- $20</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="lavender.jpg">
+<p>Lavender - $90</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="lotus.jpg">
+<p>Lotus - $70</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="mari.jpg">
+<p>Marigold - $100</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="sun.jpg">
+<p>Sunflower- $90</p>
+<button onclick="myfunc()">Shop</button></div>
+        <div class="flower"><img src="tulip.jpg">
+<p>Tulip - $80</p>
+<button onclick="myfunc()">Shop</button></div>
+       
+    </div><br>
+    <div id="tips">
+        <h3>🌸 Flower Care Tips by Type</h3>
+        <p>Here’s how to keep your favorite blooms fresh and fabulous for longer:</p>
+        <h5>🌹 Rose</h5>
+        <p>Cut stems at a 45° angle and remove any leaves below water level.
+<br>
+Use lukewarm water in a clean vase.
+<br>
+Change water every 2 days to prevent bacteria.
+<br>
+💡 Add a spoon of sugar to enhance bloom!</p>
+<h5>🌼 Jasmine</h5>
+<p>Place in a cool spot with indirect sunlight.
+    <br>
+
+Keep soil moist if potted; mist lightly if cut.
+<br>
+💡 Jasmine blooms best in a humid environment.</p>
+<h5>🌺 Lotus</h5>
+<p>Needs plenty of sunlight (if in water bowls).
+<br>
+Change water daily and keep the container shallow.
+<br>
+💡 Avoid placing near fans or vents.</p>
+<h5>.
+
+💜 Lavender
+</h5><p>Best dried! Hang upside down in a dry, dark place.
+<br>
+If fresh, keep in cool water and minimal sunlight.
+<br>
+💡 Lavender lasts longer with limited humidity.</p>
+<h5>🌼 Daisy</h5>
+<p>Cut stems under water to prevent air bubbles.
+<br>
+Use clean vases and fresh water with a bit of lemon juice.
+<br>
+💡 Daisies like cool spaces, not direct sun</p><h5>🔵 Bluebell</h5><p>Needs cool, shaded environments.
+<br>
+Use cold water and change it daily.
+<br>
+💡 Remove excess foliage to reduce bacterial growth.
+
+</p><h5>🌺 Hibiscus</h5>
+<p>Highly sensitive – blooms last just a day or two.
+<br>
+Place in bright light and mist daily.
+<br>
+💡 Avoid overwatering; let soil dry slightly between.</p>
+<h5>🟠 Marigold</h5>
+<p>Can survive in dry conditions; change water every 2 days.
+<br>
+Remove faded blooms to extend bouquet life.
+<br>
+💡 Loves sunlight but not direct heat indoors.</p>
+<h5>🌻 Sunflower</h5><p>Tall and thirsty! Refill water daily.
+<br>
+Remove any leaves below the waterline.
+<br>
+Needs strong support to stay upright.
+<br>
+💡 Use cool water and keep away from drafts.</p>
+<h5>🌷 Tulip</h5>
+<p>Use a tall vase and place in a cool room.
+<br>
+Don’t overfill water – just ⅓ of the stem is enough.
+<br>
+💡 Trim stems every 2 days; tulips keep growing after cut!</p>
+    </div><br>
+
+    <div id="contact">
+        <p>Contact Us: flowerytouch@shop.com| +91 1234567890</p>
+        <p>2025 Flowery Touch</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
